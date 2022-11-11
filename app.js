@@ -8,7 +8,7 @@ function moverPosicionRandom(elm) {
 let btnSi = document.getElementById('btn_si')
 let btnNo = document.getElementById('btn_no')
 let divModoSexo = document.getElementsByClassName('modo_sexo')[0]  //[0] es el numero de div, en este caso solo hay 1 entonces es el 0.
-
+let video = document.getElementsByClassName('video')[0]
 btnNo.addEventListener('mouseenter', function(e){moverPosicionRandom(e.target)})
 
 btnSi.addEventListener('click', function(e){
@@ -17,4 +17,6 @@ btnSi.addEventListener('click', function(e){
     divModoSexo.style.display='block';
     const cancion = new Audio('img\\audio.mp3');
     cancion.play();
+    btnNo.style.display='hidden';
+    video.style.display='hidden';
 })
